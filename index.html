@@ -1,128 +1,118 @@
-import * as React from 'react'
-import { View } from 'utopia-api'
+import React from 'react';
+import { Section, Title, Subtitle, Text, List, ListItem, Highlight } from '@utopia/ui'; // adjust based on your UI lib
 
-export var Playground = ({ style }) => {
-  const [currentPage, setCurrentPage] = React.useState('Home')
-
-  const renderContent = () => {
-    switch (currentPage) {
-      case 'Summary':
-        return (
-          <div style={contentStyle}>
-            <h1>TNT-Bank: Blockchain Efficiency Redefined</h1>
-            <p>
-              TNT-Bank is the first mathematically complete blockchain—settling transactions in just two minutes,
-              consuming negligible energy, and offering cryptographic security that surpasses Bitcoin.
-            </p>
-            <ul style={{ textAlign: 'left' }}>
-              <li><strong>Deterministic Finality:</strong> Every transaction is finalized with mathematical certainty.</li>
-              <li><strong>Dual-Signature Security:</strong> Both sender and recipient must authorize each transaction.</li>
-              <li><strong>Energy Efficiency:</strong> Zero mining, near-zero environmental cost.</li>
-              <li><strong>Atomic Synchronization:</strong> All transactions process in globally synced 2-minute batches.</li>
-            </ul>
-            <p>
-              TNT-Bank is not just an upgrade—it’s a full-system redesign. Trustless, regulated, deliberate.
-            </p>
-          </div>
-        )
-      case 'Design':
-        return (
-          <div style={contentStyle}>
-            <h1>A New Paradigm in Blockchain</h1>
-            <p>
-              While Bitcoin introduced digital trust, it relies on wasteful proof-of-work and probabilistic finality.
-              TNT-Bank eliminates this inefficiency through atomic batch processing and dual consent for transfers.
-            </p>
-            <p>
-              Inspired by agency theory and banking reconciliations, TNT-Bank guarantees that all nodes view the
-              same ledger, all the time. No mempool ambiguity. No mining delay. Just pure cryptographic truth.
-            </p>
-          </div>
-        )
-      case 'Tech':
-        return (
-          <div style={contentStyle}>
-            <h1>How TNT-Bank Works</h1>
-            <h2>🔑 Dual-Key Transactions</h2>
-            <p>
-              Each wallet uses two separate key pairs: one for sending, one for receiving. This prevents fraud,
-              enables legal enforceability, and blocks unsolicited transfers.
-            </p>
-            <h2>⏱️ Synchronized Batching</h2>
-            <p>
-              Transactions occur in fixed 2-minute cycles. Proposals are submitted in minute one, confirmed in minute two.
-              Batches are finalized via Merkle root signed by validators.
-            </p>
-            <h2>🧠 Finality by Design</h2>
-            <p>
-              Every finalized block requires unanimous validator signatures. No forks, no reorgs, no uncertainty.
-            </p>
-          </div>
-        )
-      case 'BWBs':
-        return (
-          <div style={contentStyle}>
-            <h1>Bearer Water Bonds (BWBs)</h1>
-            <p>
-              BWBs are digital tokens backed by permitted natural spring water. Each bond is redeemable for physical water—
-              combining the autonomy of bearer assets with real-world value.
-            </p>
-            <ul style={{ textAlign: 'left' }}>
-              <li>🔒 Direct ownership of water rights</li>
-              <li>🚛 Physical redemption: 6,700 gallons per bond</li>
-              <li>🌎 Backed by real assets, not speculative claims</li>
-              <li>📜 SEC-grade transparency and accountability</li>
-            </ul>
-            <p>
-              Learn more: <a href="https://haykov.substack.com/p/bwb" target="_blank">BWB White Paper</a>
-            </p>
-          </div>
-        )
-      default:
-        return (
-          <div style={contentStyle}>
-            <h1>Welcome to TNT-Bank</h1>
-            <p>
-              This is a complete rethink of what blockchain can be: efficient, deterministic, environmentally responsible,
-              and provably secure.
-            </p>
-            <p>
-              Explore how TNT-Bank solves Bitcoin’s flaws and builds the financial system of the future.
-            </p>
-          </div>
-        )
-    }
-  }
-
+const TNTBankOverview: React.FC = () => {
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', height: '100vh', width: '100%', backgroundColor: 'white', ...style }}>
-      {/* Top Navigation Bar */}
-      <div style={{ backgroundColor: '#cccccc', padding: '20px 0', textAlign: 'center' }}>
-        <a href="#" onClick={() => setCurrentPage('Home')} style={navItemStyle}>Home</a>
-        <a href="#" onClick={() => setCurrentPage('Summary')} style={navItemStyle}>Summary</a>
-        <a href="#" onClick={() => setCurrentPage('Design')} style={navItemStyle}>Design</a>
-        <a href="#" onClick={() => setCurrentPage('Tech')} style={navItemStyle}>Tech</a>
-        <a href="#" onClick={() => setCurrentPage('BWBs')} style={navItemStyle}>BWBs</a>
-      </div>
-      {/* Page Content */}
-      {renderContent()}
-    </div>
-  )
-}
+    <>
+      <Section>
+        <Title>Beyond Proof-of-Work: How TNT-Bank Redefines Blockchain Efficiency</Title>
+        <Subtitle>Author: Joseph Mark Haykov</Subtitle>
+        <Text>
+          TNT-Bank is the first mathematically complete blockchain—designed to overcome the inherent inefficiencies of traditional systems. It settles transactions in just two minutes, consumes negligible energy, and delivers security guarantees that far exceed those of Bitcoin.
+        </Text>
+      </Section>
 
-// Reusable styles
-const navItemStyle = {
-  margin: '0 30px',
-  color: 'black',
-  fontSize: '18px',
-  fontWeight: 'bold',
-  textDecoration: 'none',
-  cursor: 'pointer',
-}
+      <Section>
+        <Subtitle>Key Improvements</Subtitle>
+        <List>
+          <ListItem>
+            <Highlight>Superior Efficiency</Highlight> – Processes transactions in deterministic, synchronized batches, unlike Bitcoin’s energy-intensive PoW.
+          </ListItem>
+          <ListItem>
+            <Highlight>Unparalleled Security</Highlight> – Dual-key transaction approval makes unauthorized transfers mathematically impossible.
+          </ListItem>
+          <ListItem>
+            <Highlight>Transparent and Trustless</Highlight> – Fully decentralized, symmetric ledger; every node maintains the same state.
+          </ListItem>
+          <ListItem>
+            <Highlight>Energy Efficiency</Highlight> – Near-zero cost due to no mining.
+          </ListItem>
+        </List>
+      </Section>
 
-const contentStyle = {
-  padding: '40px',
-  textAlign: 'left',
-  maxWidth: '800px',
-  margin: '0 auto',
-}
+      <Section>
+        <Title>A New Paradigm in Blockchain Technology</Title>
+        <Text>
+          TNT-Bank avoids the probabilistic delays of Bitcoin, replacing them with synchronized batch finality and strict dual-signature enforcement.
+        </Text>
+      </Section>
+
+      <Section>
+        <Subtitle>Satisficing vs Synchronization</Subtitle>
+        <Text>
+          Bitcoin’s design suffers from satisficing heuristics—delayed finality, unsynchronized mempools, and fee-based prioritization. TNT-Bank introduces:
+        </Text>
+        <List>
+          <ListItem>Bank-like periodic reconciliation</ListItem>
+          <ListItem>Atomic transaction batches</ListItem>
+          <ListItem>Merkle root-based session finality</ListItem>
+        </List>
+      </Section>
+
+      <Section>
+        <Subtitle>Technical Innovations Summary</Subtitle>
+        <List>
+          <ListItem>
+            <Highlight>Atomic Visibility</Highlight> – No mempool chaos. Transactions finalize in 2-minute synchronized batches.
+          </ListItem>
+          <ListItem>
+            <Highlight>Dual-Signature Enforcement</Highlight> – Sender and recipient must both sign every transaction.
+          </ListItem>
+          <ListItem>
+            <Highlight>Deterministic Finality</Highlight> – Consensus requires unanimous validator approval.
+          </ListItem>
+        </List>
+      </Section>
+
+      <Section>
+        <Title>TNT-Bank: Transparent, Regulated, and Fact-Based</Title>
+        <Text>
+          Unlike hype-driven coins, TNT-Bank complies with SEC standards and supports every claim with verifiable mathematical proof.
+        </Text>
+      </Section>
+
+      <Section>
+        <Title>TNT-Bank: Bearer Freedom + Registered Security</Title>
+        <Text>
+          Users retain private key control, but transactions are still regulatory-compliant and legally enforceable via dual-key authentication.
+        </Text>
+      </Section>
+
+      <Section>
+        <Title>Technical Deep Dive</Title>
+        <List>
+          <ListItem>
+            <Highlight>1. Dual-Key Model</Highlight> – Debit key signs spending, credit key approves receiving.
+          </ListItem>
+          <ListItem>
+            <Highlight>2. Synchronized Batches</Highlight> – Two-phase, 2-minute transaction windows.
+          </ListItem>
+          <ListItem>
+            <Highlight>3. Universal Approval</Highlight> – Blocks only finalize when all validators sign.
+          </ListItem>
+        </List>
+      </Section>
+
+      <Section>
+        <Title>Bearer Water Bonds (BWBs)</Title>
+        <Text>
+          BWBs are blockchain-native tokens backed by real water rights—redeemable on-site. They merge digital transparency with physical redemption.
+        </Text>
+        <List>
+          <ListItem>Fractional spring water rights ownership</ListItem>
+          <ListItem>Physical tanker redemption</ListItem>
+          <ListItem>Tradable, auditable, and compliant</ListItem>
+        </List>
+      </Section>
+
+      <Section>
+        <Title>A Glimpse into the Future of Finance</Title>
+        <Text>
+          TNT-Bank merges mathematically provable trust, environmental sustainability, and physical asset backing. It’s not just decentralized—it’s deliberate.
+        </Text>
+      </Section>
+    </>
+  );
+};
+
+export default TNTBankOverview;

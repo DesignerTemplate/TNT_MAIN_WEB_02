@@ -1,19 +1,21 @@
+import React from 'react';
 
+const TestComponent = () => (
   <div
     style={{
       display: 'flex',
       justifyContent: 'center',
-      padding: '40px',
-      textAlign: 'left',
-      minHeight: '100vh',
+      padding: '0 20px', // This ensures left and right padding
+      textAlign: 'left',  // Align text to the left
+      minHeight: '100vh',  // Ensures it takes full height
       alignItems: 'center',
     }}
   >
     <div
       style={{
-        maxWidth: '800px',
-        width: '50%',
-        margin: '20 auto',
+        maxWidth: '800px', // Controls the width of the content
+        width: '100%',
+        margin: '0 auto', // Automatically centers the content
       }}
     >
       <h1>Who I Am, How I Fit Into the Universe, and Why I Deserve Wages</h1>

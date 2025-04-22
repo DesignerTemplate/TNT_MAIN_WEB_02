@@ -3,12 +3,14 @@ import React from 'react';
 const CenteredText: React.FC = () => {
   const text = `
     🎯 Classical vs. BROSUMSI Definitions of Surplus
+
     Consumer Surplus (CS)
     Classical definition: Consumer surplus is the difference between the maximum price a buyer is willing to pay for a good and the actual price paid. It's meant to reflect the buyer’s net gain from the transaction.
     P_max(x): the buyer’s subjective maximum price
     P(x): the actual market price
     Classical surplus is written as: CS(x) = P_max(x) − P(x)
     But this is usually expressed over ℝ, even though the buyer is making an integer-valued, bounded, discrete decision.
+
     BROSUMSI definition: In BROSUMSI, prices are integers. So is surplus. All values are subjective, local, and recorded at the moment of choice. There’s no continuous optimization—only integer deltas under constraint.
     Let:
     P_max(x): the buyer’s subjective value of the good (in cents)
@@ -19,12 +21,14 @@ const CenteredText: React.FC = () => {
     If CS(x) > 0: the buyer perceives the good as worth more than it cost → the trade happens.
     If CS(x) < 0: the good costs more than it’s worth to the buyer → no trade.
     This is not theoretical—it’s a ledger delta. It gets recorded. It reflects a belief, not an optimization.
+
     Producer Surplus (PS)
     Classical definition: Producer surplus is the difference between the price received and the seller’s minimum acceptable price. It’s a measure of subjective gain from the transaction.
     P(x): the actual price received
     P_min(x): the seller’s internal cutoff
     Classical surplus: PS(x) = P(x) − P_min(x)
     But again, it's defined over ℝ—detached from how sellers actually make decisions.
+
     BROSUMSI definition: Same structure, now grounded in integer reality.
     Let:
     P_min(x): the seller’s internal minimum price—accounting for cost, risk, effort, and opportunity
@@ -35,16 +39,20 @@ const CenteredText: React.FC = () => {
     If PS(x) > 0: seller gets more than their subjective cost → the trade proceeds.
     If PS(x) < 0: the deal isn’t worth it → no trade.
     For bounded agents, P_min(x) isn’t just a number—it encodes fatigue, risk tolerance, time cost, and motivation. In practice, it acts like a reservation wage.
+
     Key Point: Both CS and PS in BROSUMSI are per-event, integer-valued, and epistemically grounded. They aren’t curves or integrals—they’re agent-relative truth claims, resolved at the point of decision, recorded in the ledger. They’re not hypothetical benefits. They’re logged, structured, and mechanically conserved.
+
     Surplus as Subjective Utility
     In the BROSUMSI framework, consumer and producer surplus are not approximated over real-valued curves. They are formalized as discrete, integer-valued changes in perceived welfare—ΔU values recorded per transaction. Surplus is local, agent-relative, epistemically gated, and resolved only after the transaction is complete. There is no global optimization, only subjective expectations grounded in bounded cognition. Each surplus is defined ex-ante and resolved ex-post, not as a theoretical construct but as a verifiable ledger state—an entry in the agent’s subjective accounting system.
     These values have three key characteristics:
     Agent-relative: Surplus is not defined globally. Each agent sets their internal valuation—maximum willingness to pay (P_max) or minimum acceptable compensation (P_min)—based on their subjective epistemic frame at the moment of decision.
     Integer-valued: All prices, costs, and utility differences are measured in discrete monetary units (e.g., cents). Surplus is formally defined over ℤ, not ℝ.
     Cognitively bounded: Agents operate under limited foresight, incomplete information, and finite processing capacity. Their valuations are heuristic, not exhaustive.
+
     From this, a transaction occurs if and only if it is voluntary—that is, if both agents subjectively expect to benefit:
     A trade proceeds if and only if CS(x) > 0 and PS(x) > 0.
     This preserves the classical notion of mutual benefit, but reinterprets it under epistemic realism. Surplus is no longer derived from a cardinal utility function—it is a local, subjective delta encoded in the agent’s internal ledger.
+
     Transaction Structure and Formalization
     Each transaction is constructed as a dual, time-indexed epistemic event. It consists of two agents—a buyer and a seller—and two pairs of utility values: one ex-ante (the agent’s belief before acting) and one ex-post (their realized valuation after the outcome is known). This structure is captured in the Coq formal model using the following primitives:
     Agents and goods are indexed over ℕ, supporting first-order reasoning and type-safe lookups.
@@ -70,7 +78,7 @@ const CenteredText: React.FC = () => {
   return (
     <div
       style={{
-        width: '80%',
+        width: 'calc(100% - 2in)', // 1 inch margin on left and right
         margin: '0 auto',
         padding: '20px',
         textAlign: 'left',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, Title, Subtitle, Text, List, ListItem, Highlight } from '@utopia/ui'; // adjust based on your UI lib
+import { Section, Title, Subtitle, Text, List, ListItem, Highlight } from '@utopia/ui';
 
 const TNTBankOverview: React.FC = () => {
   return (
@@ -16,99 +16,146 @@ const TNTBankOverview: React.FC = () => {
         <Subtitle>Key Improvements</Subtitle>
         <List>
           <ListItem>
-            <Highlight>Superior Efficiency</Highlight> – Processes transactions in deterministic, synchronized batches, unlike Bitcoin’s energy-intensive PoW.
+            <Highlight>Superior Efficiency</Highlight> – Transactions settle in deterministic, synchronized batches—drastically reducing delays and energy waste.
           </ListItem>
           <ListItem>
-            <Highlight>Unparalleled Security</Highlight> – Dual-key transaction approval makes unauthorized transfers mathematically impossible.
+            <Highlight>Unparalleled Security</Highlight> – Dual-key (debit/credit) cryptographic verification makes fraud mathematically implausible.
           </ListItem>
           <ListItem>
-            <Highlight>Transparent and Trustless</Highlight> – Fully decentralized, symmetric ledger; every node maintains the same state.
+            <Highlight>Transparent and Trustless Operation</Highlight> – Fully decentralized and symmetric ledger—every node maintains identical state.
           </ListItem>
           <ListItem>
-            <Highlight>Energy Efficiency</Highlight> – Near-zero cost due to no mining.
+            <Highlight>Energy Efficiency</Highlight> – Operates without mining, consuming negligible power.
           </ListItem>
         </List>
+        <Text>
+          TNT-Bank isn’t just an upgrade—it’s a full paradigm shift in secure, decentralized finance.
+        </Text>
       </Section>
 
       <Section>
         <Title>A New Paradigm in Blockchain Technology</Title>
         <Text>
-          TNT-Bank avoids the probabilistic delays of Bitcoin, replacing them with synchronized batch finality and strict dual-signature enforcement.
+          Bitcoin introduced proof-of-work, but its reliance on probabilistic heuristics makes it unsustainable. TNT-Bank’s synchronized batch processing and dual-key finality model offers rapid and energy-efficient consensus.
         </Text>
       </Section>
 
       <Section>
-        <Subtitle>Satisficing vs Synchronization</Subtitle>
+        <Subtitle>Bitcoin’s Core Flaw: Satisficing Instead of Synchronization</Subtitle>
         <Text>
-          Bitcoin’s design suffers from satisficing heuristics—delayed finality, unsynchronized mempools, and fee-based prioritization. TNT-Bank introduces:
+          Bitcoin delays finality and relies on mempool ambiguity. TNT-Bank synchronizes visibility and eliminates guesswork:
         </Text>
         <List>
-          <ListItem>Bank-like periodic reconciliation</ListItem>
-          <ListItem>Atomic transaction batches</ListItem>
-          <ListItem>Merkle root-based session finality</ListItem>
+          <ListItem>Bank-like reconciliation phases</ListItem>
+          <ListItem>Atomic, Merkle-root batch processing</ListItem>
+          <ListItem>Dual-key security instead of hash-based races</ListItem>
         </List>
       </Section>
 
       <Section>
-        <Subtitle>Technical Innovations Summary</Subtitle>
+        <Subtitle>Summary of Innovations</Subtitle>
         <List>
           <ListItem>
-            <Highlight>Atomic Visibility</Highlight> – No mempool chaos. Transactions finalize in 2-minute synchronized batches.
+            <Highlight>Atomic Visibility</Highlight> – 2-minute sessions with full debit/credit validation before finality.
           </ListItem>
           <ListItem>
-            <Highlight>Dual-Signature Enforcement</Highlight> – Sender and recipient must both sign every transaction.
+            <Highlight>Dual-Signature Enforcement</Highlight> – Explicit approval from sender and recipient.
           </ListItem>
           <ListItem>
-            <Highlight>Deterministic Finality</Highlight> – Consensus requires unanimous validator approval.
-          </ListItem>
-        </List>
-      </Section>
-
-      <Section>
-        <Title>TNT-Bank: Transparent, Regulated, and Fact-Based</Title>
-        <Text>
-          Unlike hype-driven coins, TNT-Bank complies with SEC standards and supports every claim with verifiable mathematical proof.
-        </Text>
-      </Section>
-
-      <Section>
-        <Title>TNT-Bank: Bearer Freedom + Registered Security</Title>
-        <Text>
-          Users retain private key control, but transactions are still regulatory-compliant and legally enforceable via dual-key authentication.
-        </Text>
-      </Section>
-
-      <Section>
-        <Title>Technical Deep Dive</Title>
-        <List>
-          <ListItem>
-            <Highlight>1. Dual-Key Model</Highlight> – Debit key signs spending, credit key approves receiving.
-          </ListItem>
-          <ListItem>
-            <Highlight>2. Synchronized Batches</Highlight> – Two-phase, 2-minute transaction windows.
-          </ListItem>
-          <ListItem>
-            <Highlight>3. Universal Approval</Highlight> – Blocks only finalize when all validators sign.
+            <Highlight>Deterministic Finality</Highlight> – Only finalized when all validators sign the Merkle root.
           </ListItem>
         </List>
       </Section>
 
       <Section>
-        <Title>Bearer Water Bonds (BWBs)</Title>
+        <Title>Fact vs Fiction: A Regulated, Transparent Blockchain</Title>
         <Text>
-          BWBs are blockchain-native tokens backed by real water rights—redeemable on-site. They merge digital transparency with physical redemption.
+          Unlike speculative crypto tokens, TNT-Bank voluntarily complies with <Highlight>SEC Rule 10b-5</Highlight>, offering auditable, courtroom-grade evidence for every claim.
         </Text>
+      </Section>
+
+      <Section>
+        <Title>Bearer vs Registered Systems</Title>
         <List>
-          <ListItem>Fractional spring water rights ownership</ListItem>
-          <ListItem>Physical tanker redemption</ListItem>
-          <ListItem>Tradable, auditable, and compliant</ListItem>
+          <ListItem>
+            <Highlight>Bearer Instruments</Highlight> – Like gold or Bitcoin: high autonomy, low protection.
+          </ListItem>
+          <ListItem>
+            <Highlight>Registered Instruments</Highlight> – Like bank accounts: high regulation, low autonomy.
+          </ListItem>
+        </List>
+        <Text>
+          <Highlight>TNT-Bank</Highlight> fuses the best of both: self-custody + legal enforceability.
+        </Text>
+      </Section>
+
+      <Section>
+        <Title>How TNT-Bank Works</Title>
+        <List>
+          <ListItem>
+            <Highlight>1. Dual-Key Model</Highlight> – Debit key signs transactions; credit key must approve incoming funds.
+          </ListItem>
+          <ListItem>
+            <Highlight>2. Synchronized Batches</Highlight> – Transactions settle in 2-minute cycles via Merkle root.
+          </ListItem>
+          <ListItem>
+            <Highlight>3. Universal Block Approval</Highlight> – Finality requires unanimous validator signatures.
+          </ListItem>
         </List>
       </Section>
 
       <Section>
-        <Title>A Glimpse into the Future of Finance</Title>
+        <Title>Real-World Assets: Bearer Water Bonds (BWBs)</Title>
         <Text>
-          TNT-Bank merges mathematically provable trust, environmental sustainability, and physical asset backing. It’s not just decentralized—it’s deliberate.
+          TNT-Bank introduces <Highlight>BWBs</Highlight>—digital tokens backed by redeemable, source-owned spring water.
+        </Text>
+        <List>
+          <ListItem>Direct fractional ownership of water rights</ListItem>
+          <ListItem>Redeemable for 6,700-gallon water tankers</ListItem>
+          <ListItem>Auditable, compliant, and digitally tradable</ListItem>
+        </List>
+        <Text>
+          BWBs solve the inefficiencies of water ETFs and futures by offering <Highlight>physical settlement</Highlight> and eliminating counterparty risk.
+        </Text>
+      </Section>
+
+      <Section>
+        <Title>Strategic Value & Innovation</Title>
+        <List>
+          <ListItem>Energy-efficient, two-minute transaction finality</ListItem>
+          <ListItem>Dual-signature authorization prevents unauthorized transfers</ListItem>
+          <ListItem>Direct link to tangible, essential resources like water</ListItem>
+        </List>
+      </Section>
+
+      <Section>
+        <Title>Explore the Full Framework</Title>
+        <Text>
+          Learn more through our verified and public documentation:
+        </Text>
+        <List>
+          <ListItem>
+            <a href="https://haykov.substack.com/p/bwb" target="_blank" rel="noopener noreferrer">
+              Introductory Bearer Water Bonds White Paper
+            </a>
+          </ListItem>
+          <ListItem>
+            <a href="https://haykov.substack.com/p/water-bonds-white-paper" target="_blank" rel="noopener noreferrer">
+              Why BWBs are a Low-Risk Investment
+            </a>
+          </ListItem>
+          <ListItem>
+            <a href="https://haykov.substack.com/p/tnt-white-paper-667" target="_blank" rel="noopener noreferrer">
+              Theoretical Explanation of TNT‑Bank Money
+            </a>
+          </ListItem>
+        </List>
+      </Section>
+
+      <Section>
+        <Title>The Future of Finance Is Deliberate</Title>
+        <Text>
+          TNT-Bank’s protocol isn’t built on hype or probabilistic guesswork. It’s a deliberate, auditable financial system designed for security, compliance, and long-term sustainability.
         </Text>
       </Section>
     </>

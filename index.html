@@ -123,17 +123,21 @@ const CenteredText: React.FC = () => {
   return (
     <div
       style={{
-        width: 'calc(100% - 2in)', // 1 inch margin on left and right
-        margin: '0 auto',
-        padding: '20px',
-        textAlign: 'left',
-        whiteSpace: 'pre-wrap',
-        wordWrap: 'break-word',
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '0 1in',
       }}
     >
-      {splitText}
+      <div
+        style={{
+          width: '100%',
+          maxWidth: 'calc(100% - 2in)', // 1-inch margin on both sides
+          textAlign: 'left',
+          whiteSpace: 'pre-wrap',
+          wordWrap: 'break-word',
+        }}
+      >
+        {splitText}
+      </div>
     </div>
   );
-};
-
-export default CenteredText;

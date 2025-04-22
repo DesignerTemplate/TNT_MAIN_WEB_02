@@ -6,119 +6,123 @@ export var Playground = ({ style }) => {
 
   const renderContent = () => {
     switch (currentPage) {
-      case 'Info':
+      case 'Summary':
         return (
-          <div style={{ padding: '40px', textAlign: 'left', maxWidth: '900px', margin: '0 auto', lineHeight: '1.6' }}>
-            <h1>TNT‑Bank: Beyond Proof-of-Work</h1>
-            <h2>Author: Joseph Mark Haykov</h2>
+          <div style={contentStyle}>
+            <h1>TNT-Bank: Blockchain Efficiency Redefined</h1>
             <p>
-              <strong>Executive Summary</strong><br />
-              TNT‑Bank is the first mathematically complete blockchain—designed to overcome the inherent inefficiencies of traditional systems. It settles transactions in just two minutes, consumes negligible energy, and delivers security guarantees that far exceed those of Bitcoin.
+              TNT-Bank is the first mathematically complete blockchain—settling transactions in just two minutes,
+              consuming negligible energy, and offering cryptographic security that surpasses Bitcoin.
             </p>
-
-            <h3>Key Improvements:</h3>
-            <ul>
-              <li><strong>Superior Efficiency:</strong> Deterministic finality eliminates delay and reduces energy usage.</li>
-              <li><strong>Unparalleled Security:</strong> Dual-key approval replaces probabilistic consensus for stronger guarantees.</li>
-              <li><strong>Trustless Operation:</strong> Fully decentralized symmetric ledger.</li>
-              <li><strong>Energy Efficiency:</strong> Near-zero energy usage, fully aligned with modern sustainability goals.</li>
+            <ul style={{ textAlign: 'left' }}>
+              <li><strong>Deterministic Finality:</strong> Every transaction is finalized with mathematical certainty.</li>
+              <li><strong>Dual-Signature Security:</strong> Both sender and recipient must authorize each transaction.</li>
+              <li><strong>Energy Efficiency:</strong> Zero mining, near-zero environmental cost.</li>
+              <li><strong>Atomic Synchronization:</strong> All transactions process in globally synced 2-minute batches.</li>
             </ul>
-
-            <p><strong>A New Paradigm in Blockchain Technology</strong><br />
-            TNT‑Bank addresses Bitcoin’s core issues using synchronized batch processing and dual-key authorization—solving inefficiencies rather than masking them with mining.</p>
-
-            <h3>Bitcoin’s Core Flaw: Satisficing Instead of Synchronization</h3>
-            <p>Bitcoin relies on computational work and lacks full visibility into pending transactions. TNT‑Bank uses synchronized finality to deliver true clarity.</p>
-
-            <h3>How TNT‑Bank Fixes This</h3>
-            <ul>
-              <li>Atomic Batch Processing</li>
-              <li>Bank-like reconciliation</li>
-              <li>Cryptographically guaranteed dual consent</li>
-            </ul>
-
-            <h3>TNT‑Bank: Solving, Not Satisficing</h3>
-            <p>Mathematically synchronized transactions eliminate ambiguity and enforce dual-signature verification for all transfers.</p>
-
-            <h3>Three Technical Pillars</h3>
-            <ol>
-              <li>
-                <strong>Atomic Visibility via Synchronized Batches:</strong> All nodes see and approve transactions before finality.
-              </li>
-              <li>
-                <strong>Dual-Signature Enforcement:</strong> Cryptographic consent required by both sender and recipient.
-              </li>
-              <li>
-                <strong>Deterministic Finality:</strong> Finality reached via universal Merkle root signing.
-              </li>
-            </ol>
-
-            <h3>From Heuristics to Cryptographic Truth</h3>
-            <p>Bitcoin was an approximation. TNT‑Bank is the solution.</p>
-
-            <h2>The Financial System of the Future</h2>
-            <p>Security, speed, sustainability—TNT‑Bank delivers all without compromise.</p>
-
-            <h3>Transparent, Regulated, and Fact‑Based</h3>
             <p>
-              TNT‑Bank adheres to SEC-grade standards. All claims are backed by cryptographic proof, not speculation.
-              Even the math is peer-reviewable.
-            </p>
-
-            <p>
-              Example comparisons: <br />
-              - Meme coins like “Monkey Jizz” show the risk of hype-driven models. <br />
-              - TNT‑Bank provides measurable, transparent performance metrics.
-            </p>
-
-            <h3>Real-World Asset‑Backed Token: Bearer Water Bonds (BWBs)</h3>
-            <p>
-              <strong>What makes BWBs different?</strong>
-              <ul>
-                <li>Fractional ownership of real water rights</li>
-                <li>Redeemable for physical water</li>
-                <li>Fully blockchain-integrated</li>
-              </ul>
-            </p>
-
-            <h3>Why Water Matters</h3>
-            <p>
-              Most water investments—ETFs, derivatives—don’t provide physical access. BWBs do.
-            </p>
-
-            <h3>BWBs: Key Advantages</h3>
-            <ul>
-              <li>Direct access to natural water sources</li>
-              <li>Two-minute transaction finality</li>
-              <li>Physically redeemable in New Hampshire</li>
-              <li>Scalable and legally enforceable</li>
-            </ul>
-
-            <h2>Resources</h2>
-            <p>
-              - <a href="https://haykov.substack.com/p/formal-tnt-specs" target="_blank" rel="noopener noreferrer">Formal TNT Specification</a><br />
-              - <a href="https://haykov.substack.com/p/bwb" target="_blank" rel="noopener noreferrer">BWB White Paper</a><br />
-              - <a href="https://haykov.substack.com/p/water-bonds-white-paper" target="_blank" rel="noopener noreferrer">Low-Risk Investment Explained</a><br />
-              - <a href="https://haykov.substack.com/p/tnt-white-paper-667" target="_blank" rel="noopener noreferrer">Theory of TNT-Bank Money</a>
-            </p>
-
-            <h2>Conclusion</h2>
-            <p>
-              TNT‑Bank merges trustless decentralization with real-world financial utility.<br />
-              Welcome to TNT‑Bank—where finance isn’t just decentralized, it’s deliberate.
+              TNT-Bank is not just an upgrade—it’s a full-system redesign. Trustless, regulated, deliberate.
             </p>
           </div>
         )
-
+      case 'Design':
+        return (
+          <div style={contentStyle}>
+            <h1>A New Paradigm in Blockchain</h1>
+            <p>
+              While Bitcoin introduced digital trust, it relies on wasteful proof-of-work and probabilistic finality.
+              TNT-Bank eliminates this inefficiency through atomic batch processing and dual consent for transfers.
+            </p>
+            <p>
+              Inspired by agency theory and banking reconciliations, TNT-Bank guarantees that all nodes view the
+              same ledger, all the time. No mempool ambiguity. No mining delay. Just pure cryptographic truth.
+            </p>
+          </div>
+        )
+      case 'Tech':
+        return (
+          <div style={contentStyle}>
+            <h1>How TNT-Bank Works</h1>
+            <h2>🔑 Dual-Key Transactions</h2>
+            <p>
+              Each wallet uses two separate key pairs: one for sending, one for receiving. This prevents fraud,
+              enables legal enforceability, and blocks unsolicited transfers.
+            </p>
+            <h2>⏱️ Synchronized Batching</h2>
+            <p>
+              Transactions occur in fixed 2-minute cycles. Proposals are submitted in minute one, confirmed in minute two.
+              Batches are finalized via Merkle root signed by validators.
+            </p>
+            <h2>🧠 Finality by Design</h2>
+            <p>
+              Every finalized block requires unanimous validator signatures. No forks, no reorgs, no uncertainty.
+            </p>
+          </div>
+        )
+      case 'BWBs':
+        return (
+          <div style={contentStyle}>
+            <h1>Bearer Water Bonds (BWBs)</h1>
+            <p>
+              BWBs are digital tokens backed by permitted natural spring water. Each bond is redeemable for physical water—
+              combining the autonomy of bearer assets with real-world value.
+            </p>
+            <ul style={{ textAlign: 'left' }}>
+              <li>🔒 Direct ownership of water rights</li>
+              <li>🚛 Physical redemption: 6,700 gallons per bond</li>
+              <li>🌎 Backed by real assets, not speculative claims</li>
+              <li>📜 SEC-grade transparency and accountability</li>
+            </ul>
+            <p>
+              Learn more: <a href="https://haykov.substack.com/p/bwb" target="_blank">BWB White Paper</a>
+            </p>
+          </div>
+        )
       default:
         return (
-          <div style={{ padding: '40px', textAlign: 'center' }}>
-            <h1>Welcome to Utopia TNT Playground</h1>
-            <button onClick={() => setCurrentPage('Info')}>Learn About TNT-Bank</button>
+          <div style={contentStyle}>
+            <h1>Welcome to TNT-Bank</h1>
+            <p>
+              This is a complete rethink of what blockchain can be: efficient, deterministic, environmentally responsible,
+              and provably secure.
+            </p>
+            <p>
+              Explore how TNT-Bank solves Bitcoin’s flaws and builds the financial system of the future.
+            </p>
           </div>
         )
     }
   }
 
-  return <View style={style}>{renderContent()}</View>
+  return (
+    <div style={{ fontFamily: 'Arial, sans-serif', height: '100vh', width: '100%', backgroundColor: 'white', ...style }}>
+      {/* Top Navigation Bar */}
+      <div style={{ backgroundColor: '#cccccc', padding: '20px 0', textAlign: 'center' }}>
+        <a href="#" onClick={() => setCurrentPage('Home')} style={navItemStyle}>Home</a>
+        <a href="#" onClick={() => setCurrentPage('Summary')} style={navItemStyle}>Summary</a>
+        <a href="#" onClick={() => setCurrentPage('Design')} style={navItemStyle}>Design</a>
+        <a href="#" onClick={() => setCurrentPage('Tech')} style={navItemStyle}>Tech</a>
+        <a href="#" onClick={() => setCurrentPage('BWBs')} style={navItemStyle}>BWBs</a>
+      </div>
+      {/* Page Content */}
+      {renderContent()}
+    </div>
+  )
+}
+
+// Reusable styles
+const navItemStyle = {
+  margin: '0 30px',
+  color: 'black',
+  fontSize: '18px',
+  fontWeight: 'bold',
+  textDecoration: 'none',
+  cursor: 'pointer',
+}
+
+const contentStyle = {
+  padding: '40px',
+  textAlign: 'left',
+  maxWidth: '800px',
+  margin: '0 auto',
 }

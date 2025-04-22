@@ -2,85 +2,35 @@ import React from 'react';
 
 const CenteredText: React.FC = () => {
   const text = `
-    🎯 Classical vs. BROSUMSI Definitions of Surplus
+    Within the same model, surplus is defined as the difference between what someone is willing to pay and what they actually pay.
+    That difference is measured in money—and money moves in discrete units (e.g., one cent).
+    So the underlying model assumes continuous values, but describes a system built entirely from integers.
+  `;
 
-    Consumer Surplus (CS)
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '0 1in',
+        textAlign: 'center',
+        fontFamily: 'Arial, sans-serif',
+        fontSize: '16px',
+        lineHeight: '1.5',
+        whiteSpace: 'pre-wrap',
+        wordWrap: 'break-word',
+      }}
+    >
+      <div
+        style={{
+          width: '100%',
+          maxWidth: 'calc(100% - 2in)', // 1-inch margin on both sides
+        }}
+      >
+        {text}
+      </div>
+    </div>
+  );
+};
 
-    Classical definition:
-    Consumer surplus is the difference between the maximum price a buyer is willing to pay for a good and the actual price paid. It's meant to reflect the buyer’s net gain from the transaction.
-
-        P_max(x): the buyer’s subjective maximum price
-
-        P(x): the actual market price
-
-    Classical surplus is written as:
-    CS(x) = P_max(x) − P(x)
-
-    But this is usually expressed over ℝ, even though the buyer is making an integer-valued, bounded, discrete decision.
-
-    BROSUMSI definition:
-    In BROSUMSI, prices are integers. So is surplus. All values are subjective, local, and recorded at the moment of choice. There’s no continuous optimization—only integer deltas under constraint.
-
-    Let:
-
-        P_max(x): the buyer’s subjective value of the good (in cents)
-
-        P(x): the actual price paid (in cents)
-
-    Then:
-
-    CS(x) = P_max(x) − P(x)
-    CS(x) ∈ ℤ
-
-    Interpretation:
-
-        If CS(x) > 0: the buyer perceives the good as worth more than it cost → the trade happens.
-
-        If CS(x) < 0: the good costs more than it’s worth to the buyer → no trade.
-
-    This is not theoretical—it’s a ledger delta. It gets recorded. It reflects a belief, not an optimization.
-
-    Producer Surplus (PS)
-
-    Classical definition:
-    Producer surplus is the difference between the price received and the seller’s minimum acceptable price. It’s a measure of subjective gain from the transaction.
-
-        P(x): the actual price received
-
-        P_min(x): the seller’s internal cutoff
-
-    Classical surplus:
-    PS(x) = P(x) − P_min(x)
-
-    But again, it's defined over ℝ—detached from how sellers actually make decisions.
-
-    BROSUMSI definition:
-    Same structure, now grounded in integer reality.
-
-    Let:
-
-        P_min(x): the seller’s internal minimum price—accounting for cost, risk, effort, and opportunity
-
-        P(x): the price actually received
-
-    Then:
-
-    PS(x) = P(x) − P_min(x)
-    PS(x) ∈ ℤ
-
-    Interpretation:
-
-        If PS(x) > 0: seller gets more than their subjective cost → the trade proceeds.
-
-        If PS(x) < 0: the deal isn’t worth it → no trade.
-
-    For bounded agents, P_min(x) isn’t just a number—it encodes fatigue, risk tolerance, time cost, and motivation. In practice, it acts like a reservation wage.
-
-    Key Point:
-    Both CS and PS in BROSUMSI are per-event, integer-valued, and epistemically grounded. They aren’t curves or integrals—they’re agent-relative truth claims, resolved at the point of decision, recorded in the ledger.
-
-    They’re not hypothetical benefits. They’re logged, structured, and mechanically conserved.
-
-    Surplus as Subjective Utility
-
-    In the BROSUMSI framework, consumer and producer surplus are not approximated over real-valued curves. They are formalized as discrete, integer-valued changes in perceived welfare—ΔU values recorded per
+export default CenteredText;
